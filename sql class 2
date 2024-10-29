@@ -1,0 +1,40 @@
+create database join1;
+use join1;
+create table table1(
+id int primary key,
+name varchar(30)
+);
+insert into table1
+(id,name)
+values
+(101,"ali"),
+(102,"fahad"),
+(103,"mateen"),
+(104,"asif");
+create table table2(
+id int primary key,
+city varchar(30)
+);
+insert into table2
+(id,city)
+values
+(101,"kar"),
+(105,"isl"),
+(103,"psh"),
+(106,"mul");
+select *
+from table1
+inner join table2
+on table1.id=table2.id;
+select *
+from table1
+left join table2
+on table1.id=table2.id;
+select *
+from table1
+right join table2
+on table1.id=table2.id;
+select *
+from table1
+left join table2
+on table1.id=table2.id;
