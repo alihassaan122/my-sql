@@ -1,0 +1,15 @@
+create database aptechs;
+use aptechs;
+create table aptechss4(
+id int primary key,
+fname varchar(30),
+lname varchar(30) 
+);
+insert into aptechss4
+(id,fname,lname)
+values
+(1,"hamza","khan"),
+(2,"ali","sheikh"),
+(3,"mateen","khan");
+select * from aptechss4;
+select id,concat_ws("1",fname," ",lname,"student") as fullname from aptechss4;
